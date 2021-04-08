@@ -1,0 +1,40 @@
+.subStore-card_items {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+.subStore-card_data {
+  position: absolute;
+}
+.subStore-img {
+  width: 100px;
+  height: 90px;
+  margin-right: 7px;
+}
+.subStore-text {
+  text-align: center;
+  font-size: 18px;
+}
+.subStore-toolbar {
+  display: flex;
+  align-items: center;
+}
+.subStore-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.subStore-cost {
+  font-size: 14px;
+}
+.subStore-infoLine {
+  display: flex;
+  justify-content: space-between;
+}
+.subStore-storeBtn {
+  position: sticky;
+  bottom: 0;
+  right: 0;
+  z-index: 20;
+  background: white;
+}

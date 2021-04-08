@@ -1,0 +1,17 @@
+.mainPage {
+  padding: 25px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards {
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}

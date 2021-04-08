@@ -1,0 +1,26 @@
+.subStore {
+  opacity: 0;
+  z-index: 10;
+  position: absolute;
+  right: 0px;
+}
+.open {
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+.subStore_card {
+  width: 280px;
+  height: 350px;
+  border: 1px solid #999;
+  background-color: white;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  margin: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  position: relative;
+}
+.full-width {
+  width: 100% !important;
+  text-align: center;
+}
