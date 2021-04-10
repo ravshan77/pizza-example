@@ -1,7 +1,7 @@
-// import { combineReducers } from "redux";
+import { combineReducers } from "redux";
 
-// import { cardData } from "./item/item-reducer";
+import cardData from "./item/item-reducer";
 
-// export const rootReducer = combineReducers({
-//   cardData: cardData,
-// });
+export const rootReducer = combineReducers({
+  cardData: cardData,
+});
