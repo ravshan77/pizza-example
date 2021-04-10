@@ -1,0 +1,42 @@
+.store_text{
+    text-align: center;
+    margin: 15px;
+}
+
+.store{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+
+.card_info{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+    box-shadow: black 0 0 4px;
+}
+
+.card_img{
+    width: 20%;
+}
+
+.img{
+    width: 100%;
+}
+
+.store_button_group{
+    display: flex;
+}
+
+.store_btn{
+    height: 40px;
+    width: 20px;
+    border: solid 1px grey;
+    text-align: center;
+}

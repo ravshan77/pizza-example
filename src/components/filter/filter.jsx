@@ -44,30 +44,47 @@ const BootstrapInput = withStyles((theme) => ({
 
 const useStyles = makeStyles((theme) => ({
   margin: {
-    margin: theme.spacing(1),
+    margin: theme.spacing(1.5),
+    width:"140px"
   },
   card: {
-    marginBottom: theme.spacing(2),
+    marginBottom: theme.spacing(5),
   },
   center: {
     textAlign: "center",
   },
+
+  filterBox:{
+    display:"flex"
+  }
 }));
 
 export default function Filter() {
   const classes = useStyles();
   const [date, setDate] = React.useState("");
   const [cost, setCost] = React.useState("");
+
+
+
   const handleChangeDate = (event) => {
     setDate(() => event.target.value);
   };
   const handleChangeCost = (event) => {
     setCost(() => event.target.value);
   };
-  const handleFilter = () => {
+
+
+
+  const handleFilterDate = () => {
     console.log("clicked: ", date);
+
+  };
+  const  handleFilterCost= () => {
+    
     console.log("clicked: ", cost);
   };
+
+
   return (
     <div className={classes.card}>
       <Typography
@@ -75,40 +92,53 @@ export default function Filter() {
         gutterBottom
         variant="h5"
         component="h2"
-        color="primary"
+        color="black"
       >
-        Filtering
+        <h3>Filtering</h3>
       </Typography>
-      <FormControl className={classes.margin}>
-        <InputLabel htmlFor="demo-customized-textbox">Cost</InputLabel>
-        <BootstrapInput
-          value={cost}
-          onChange={handleChangeCost}
-          id="demo-customized-textbox"
-        />
-      </FormControl>
-      <FormControl className={classes.margin}>
-        <InputLabel id="demo-customized-select-label">Date</InputLabel>
-        <Select
-          labelId="demo-customized-select-label"
-          id="demo-customized-select"
-          value={date}
-          onChange={handleChangeDate}
-          input={<BootstrapInput />}
-        >
-          <MenuItem value="">
-            <em>None</em>
-          </MenuItem>
-          <MenuItem value={"2021-4-2"}>2021-4-2</MenuItem>
-          <MenuItem value={"2021-3-5"}>2021-3-5</MenuItem>
-          <MenuItem value={"2021-4-3"}>2021-4-3</MenuItem>
-        </Select>
-        {(date || cost) && (
-          <Button onClick={handleFilter} variant="outlined" color="primary">
-            <Link to={`/filtered/${date}/${cost}`}>Filter</Link>
-          </Button>
-        )}
-      </FormControl>
+
+      <div className={classes.filterBox}>
+        <div>
+          <FormControl className={classes.margin}>
+            <InputLabel htmlFor="demo-customized-textbox">Cost</InputLabel>
+            <BootstrapInput
+              value={cost}
+              onChange={handleChangeCost}
+              id="demo-customized-textbox"
+            />
+            {(cost) && 
+            (<Button onClick={handleFilterCost} variant="outlined" color="primary">
+                <Link to={`/filteredByCost/${cost}`}>FilterCost</Link>
+              </Button>)
+            }
+          </FormControl>
+        </div>
+
+        <div>
+          <FormControl className={classes.margin}>
+            <InputLabel id="demo-customized-select-label">Date</InputLabel>
+            <Select
+              labelId="demo-customized-select-label"
+              id="demo-customized-select"
+              value={date}
+              onChange={handleChangeDate}
+              input={<BootstrapInput />}
+            >
+              <MenuItem value="">
+                <em>None</em>
+              </MenuItem>
+              <MenuItem value={"2021-4-2"}>2021-4-2</MenuItem>
+              <MenuItem value={"2021-3-5"}>2021-3-5</MenuItem>
+              <MenuItem value={"2021-4-3"}>2021-4-3</MenuItem>
+            </Select>
+            {(date) && (
+              <Button onClick={handleFilterDate} variant="outlined" color="primary">
+                <Link to={`/filteredByDate/${date}`}>Filter</Link>
+              </Button>
+            )}
+          </FormControl>
+        </div>
+      </div>
     </div>
   );
 }

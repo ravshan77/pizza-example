@@ -8,7 +8,8 @@ import Store from "./pages/Store/store";
 import Product from "./pages/Product/product";
 
 import { CardData } from "./service/Api";
-import Filtered from "./pages/filtered/filtered";
+import FilteredByDate from "./pages/filtered/filteredByDate";
+import FilteredByCost from "../src/pages/filtered/filteredByCost"
 
 function App() {
   return (
@@ -23,11 +24,19 @@ function App() {
           }}
         />
         <Route
-          path="/filtered/:id"
+          path="/filteredByDate/:id"
           render={(props) => {
-            return <Filtered {...props} />;
+            return <FilteredByDate {...props} />;
           }}
         />
+
+        <Route
+          path="/filteredByCost/:id"
+          render={(props) => {
+            return <FilteredByCost {...props} />;
+          }}
+        />
+
         <Route path="/store" component={Store} />
       </Switch>
       {/* <Footer /> */}

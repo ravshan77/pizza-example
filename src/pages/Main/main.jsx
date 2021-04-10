@@ -7,7 +7,9 @@ import "./main.css";
 const Main = ({ card }) => {
   return (
     <div className="mainPage">
-      <Filter />
+      <div className="filter">
+        <Filter />
+      </div>
       <div className="cards">
         {card.map((c, i) => {
           return <CardItem key={i} {...c} />;

@@ -9,7 +9,7 @@
   transition: opacity 0.5s;
 }
 .subStore_card {
-  width: 280px;
+  width: 270px;
   height: 350px;
   border: 1px solid #999;
   background-color: white;
@@ -23,4 +23,12 @@
 .full-width {
   width: 100% !important;
   text-align: center;
+}
+
+.iconHeder{
+  width: 4%;
+}
+.iconHederImg{
+  width: 100%;
+  /* padding-left:10px ; */
 }

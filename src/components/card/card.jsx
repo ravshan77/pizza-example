@@ -36,7 +36,7 @@ export default function CardItem({ title, text, imgUrl, cost }) {
               {title.toUpperCase()}
             </Typography>
             <Typography gutterBottom variant="button" component="h6">
-              {cost} so'm
+              {cost.toFixed(3)} so'm
             </Typography>
           </div>
           <Typography variant="body2" color="textSecondary" component="p">

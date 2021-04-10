@@ -1,0 +1,15 @@
+.filteredCard{
+    width: 80%;
+  margin: 0 auto;
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 18px;
+    
+}
+
+.pizzasText{
+    text-align: center;
+    margin-bottom: 15px;
+}

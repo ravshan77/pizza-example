@@ -29,6 +29,10 @@ const useStyles = makeStyles((theme) => ({
   storeIcon: {
     cursor: "pointer",
   },
+
+  color:{
+    backgroundColor:"orange",
+  }
 }));
 
 export default function Header() {
@@ -41,19 +45,20 @@ export default function Header() {
   };
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar className={classes.color} position="static">
         <Toolbar>
-          <IconButton
+          {/* <IconButton
             edge="start"
             className={classes.menuButton}
             color="inherit"
             aria-label="menu"
-          >
-            <MenuIcon />
-          </IconButton>
+            size="small"
+          > */}
+            <div className="iconHeder"><img className="iconHederImg" src="https://www.flaticon.com/svg/vstatic/svg/766/766226.svg?token=exp=1618068075~hmac=b0c2dc81dd38531690ecea2fb8df2245" /></div>
+          {/* </IconButton> */}
           <Typography variant="h6" className={classes.title}>
-            <Link to="/" style={{ color: "white" }}>
-              News
+            <Link to="/" style={{ color: "white", padding:"10px" }}>
+              Pizza
             </Link>
           </Typography>
           <Button className={classes.mr_2} color="inherit" variant="outlined">

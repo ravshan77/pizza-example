@@ -1,9 +1,6 @@
 import React from "react";
-
 import { Link } from "react-router-dom";
-
 import "./subStore.css";
-
 import { CardData } from "../../service/Api";
 import { Button } from "@material-ui/core";
 
@@ -19,17 +16,17 @@ const SubStore = () => {
               <div className="subStore-info">
                 <p className="subStore-text"> {item.title} </p>
                 <div className="subStore-infoLine">
-                  <Button variant="outlined" size="small" color="primary">
+                  <Button className="subStore-Buttons" variant="outlined" size="small" color="primary">
                     <Link to={`/product/${item.title}`}> Info </Link>
                   </Button>
-                  <p className="subStore-cost"> {item.cost} so'm </p>
+                  <p className="subStore-cost"> {item.cost.toFixed(3)} so'm </p> 
                 </div>
                 <div className="subStore-toolbar">
-                  <Button variant="outlined" size="small" color="primary">
+                  <Button className="subStore-Buttons" variant="outlined" size="small" color="primary">
                     -
                   </Button>
                   <div> 0 </div>
-                  <Button variant="outlined" size="small" color="primary">
+                  <Button className="subStore-Buttons" variant="outlined" size="small" color="primary">
                     +
                   </Button>
                 </div>
@@ -45,7 +42,9 @@ const SubStore = () => {
           color="primary"
           className="full-width"
         >
+          <Link to="/store">
           Go to Store
+          </Link>
         </Button>
       </div>
     </div>

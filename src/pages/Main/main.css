@@ -6,12 +6,17 @@
   align-items: center;
 }
 
+.filter{
+  width: auto;
+  height: 175px;
+}
+
 .cards {
   width: 80%;
   margin: 0 auto;
   display: grid;
   justify-items: center;
   align-content: center;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 18px;
 }
