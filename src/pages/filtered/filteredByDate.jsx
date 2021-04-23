@@ -3,12 +3,18 @@ import React from "react";
 import CardItem from "../../components/card/card";
 import "./filteredPageCard.css"
 
-import { filterByDate  } from "../../service/Api";
+// import { filterByDate  } from "../../service/Api";
 
-const FilteredByDate = (props) => {
+const FilteredByDate = ({props,data}) => {
   const { match, history } = props;
-  const byDate = filterByDate(match.params.id);
-  console.log("dataBuyicha" ,byDate);
+
+  console.log("propis",props)
+
+const filteredByData=data && data.filter((d)  =>  d.totalTime <= match.params.id )
+
+console.log("filteredByData",filteredByData)
+console.log("data",data)
+
   return (
     <div >
         <Button
@@ -20,17 +26,17 @@ const FilteredByDate = (props) => {
           Go back{" "}
         </Button>
 
-      <h1 className="pizzasText">Pizzas</h1>
+      <h1 className="pizzasText">Filter Product</h1>
 
       <div className="filteredCard">
 
         
-        {byDate.length ? (
-            byDate.map((item) => {
+        {filteredByData ? (
+            filteredByData.map((item) => {
               return <CardItem key={item.id} {...item} />;
             })
         ) : (
-          <h1> Bunday kunda chiqarilgan mahsulotimiz mavjud emas </h1>
+          <h1 style={{textAlign: 'center',color:"orange"}}> Bunday kunda chiqarilgan mahsulotlarimizimiz mavjud emas</h1>
           )}
       
 

@@ -6,9 +6,13 @@
   align-items: center;
 }
 
+.carusel{
+  width: 70%;
+}
+
 .filter{
   width: auto;
-  height: 175px;
+  margin: 45px;
 }
 
 .cards {

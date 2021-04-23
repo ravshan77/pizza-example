@@ -1,25 +1,124 @@
-.subStore {
-  opacity: 0;
-  z-index: 10;
-  position: absolute;
-  right: 0px;
-}
-.open {
-  opacity: 1;
-  transition: opacity 0.5s;
-}
-.subStore_card {
-  width: 270px;
-  height: 350px;
-  border: 1px solid #999;
-  background-color: white;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  margin: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  border-radius: 5px;
+.SubStore{
+  width: 100%;
+  height: 1px;
   position: relative;
+  display: flex;
 }
+
+.modal_by{
+  background-color: black;
+  position: relative;
+  width: 65%;
+  height: 100%;
+}
+
+.modal_body{
+  display: flex;
+  justify-content:center;
+  background-color: white;
+  position:absolute;
+  width: 100%;
+  height:650px;
+  z-index: 10;
+}
+
+.modal_byoff{
+  display: none;
+}
+
+.modal{
+  width: 80%;
+  height: 100%;
+  display: flex;
+  margin: auto;
+  align-items: center;
+  justify-content:center;
+  flex-direction: column; 
+  border-radius: 20px;
+}
+
+/* .wrappingForm{
+  width: 90%;
+  height: auto;
+  border:solid 1px black; 
+  display: flex;
+  margin: auto;
+  align-items: center;
+  justify-content:center;
+  flex-direction: column; 
+  border-radius: 20px;
+  background-color: #fff;
+} */
+
+.form{
+  width: 90%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  background-color: orange;
+}
+
+.inputs{
+  width: 290px;
+  height: 50px;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+}
+
+.offModalX{
+  position: absolute;
+  top: 10px;
+  right: 30px;
+  width: 30px;
+  height: 30px;
+  outline: none;
+  border: none;
+  background-color: orange;
+  font-size: 12px;
+  border-radius: 50%;
+  color: white;
+}
+
+.payH3{
+  font-size: 18px;
+  font-family: serif;
+}
+
+.sendBtn{
+  width: 80px;
+  height: 35px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  background-color: orange;
+  color: white;
+  font-size: 18px;
+  /* transform: translateY(-50%); */
+}
+
+
+.SubStoreCard_on{
+  position: absolute;
+  transition: right 3000ms;
+  right: 0px;
+  width: 35%;
+  height: 100%;
+  background-color:white;
+  z-index: 10;
+}
+
+
+.SubStoreCard_off{
+  display: none;
+}
+
+
 .full-width {
   width: 100% !important;
   text-align: center;
@@ -31,4 +130,50 @@
 .iconHederImg{
   width: 100%;
   /* padding-left:10px ; */
+}
+
+
+.Pay_page{
+  margin: 7px auto;
+  height: 40px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  bottom: 0;
+}
+
+.Pay_box{
+  width: 60%;
+  height: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 20px;
+  background-color: orange;
+  text-align: center;
+}
+
+.total{
+  width: 55%;
+  font-size: 18px;
+  font-weight: bolder;
+  border-radius: 20px;
+  color: white;
+}
+
+.pay_button{
+  width: 50%;
+  height: 90%;
+  margin-right: 2px;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  font-weight: bolder;
+  font-size: 18px;
+  background-color: white;
+  cursor: pointer;
+  color: orange;
 }

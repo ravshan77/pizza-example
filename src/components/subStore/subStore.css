@@ -1,43 +1,176 @@
-.subStore-card_items {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px;
+.Store{
+    /* border: black solid 1px; */
+    width: 100%;
+    height: 655px;
+    overflow-X: scroll;
+    position: relative;
+    box-shadow: 0 0 5px rgb(48, 43, 43);
+    background-color: white;
+  }
+
+.Store_text{
+    text-align: center;
+    margin-bottom: 15px;
+    color: orange;
 }
-.subStore-card_data {
-  position: absolute;
+
+.d-flex{
+    display: flex;
+    border: solid 1px rgb(241, 220, 220);
+    width: 100%;
+    height: 100%;
+    padding: 5px;
 }
-.subStore-Buttons{
-  /* buttons class */
+
+/* IMG BOX img */
+
+.img_Box{
+    width: 20%;
+    border: solid 1px rgb(196, 175, 175);
+    border-radius: 5px;
+    display: flex;
 }
-.subStore-img {
-  width: 100px;
-  height: 90px;
-  margin-right: 7px;
+
+.img{
+    width: 100%;
+    height: 100%;
+    margin:0 auto;
 }
-.subStore-text {
-  text-align: center;
-  font-size: 18px;
+
+/* INFO BOX title and text */
+
+.info_Box{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
 }
-.subStore-toolbar {
-  display: flex;
-  align-items: center;
+
+.title{
+    padding: 5px;
 }
-.subStore-info {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+
+.cost{
+    padding: 5px;
 }
-.subStore-cost {
-  font-size: 14px;
+
+/* BUTTON BOX buttons */
+
+.buttons_Box{
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
-.subStore-infoLine {
-  display: flex;
-  justify-content: space-between;
+
+.button_group{
+    width: 60%;
+    height: 100%;
+    border-radius: 30px;
+    display: flex;
+    background-color: #f3e9f7;
+    flex-direction: column;
+    background-color: orange;
+    border: orange solid 1.2px;
+
 }
-.subStore-storeBtn {
-  position: sticky;
-  bottom: 0;
-  right: 0;
-  z-index: 20;
-  background: white;
+
+.button_minus{
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: white;
+    color: orange;
+}
+
+.button_pilus{
+    width: 100%;
+    height: 100%;
+    border:none;
+    outline: none;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: white;
+    color: orange;
+}
+
+.pilusMinus{
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.count{
+    color: white;
+    font-size:1.5rem;
+}
+
+/* COLLECED BOX yig'indi cost+- */
+
+.collected_Box{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* color: orange;    */
+}
+
+.totalPrice{
+    color: orange;
+}
+
+/* PRODUCT INFO BUTTON */
+
+.productInfo_Box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+}
+
+.infoButton{
+    width: 40px;
+    height: 25px;
+    border:none;
+    outline: none;
+    border-radius: 7px;
+    cursor: pointer;
+    background-color: orange;
+}
+
+.infoButtton{
+   font-size: 16px;
+}
+
+.infoText{
+    color: white;
+    width: 100%;
+}
+
+/* DELETE CARD BOX X  */
+
+.deleteCard_Box{
+    width: 5%;
+    position: relative;
+}
+
+.delete_btn{
+    width: 80%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;    
+    outline: none;  
+    border: solid 1px orange;  
+    background-color: white;
+}
+
+.x{
+    color:orange;
 }

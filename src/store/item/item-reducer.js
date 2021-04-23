@@ -1,21 +1,53 @@
 import { ITEM_TYPE } from "./item-type";
+import { addItemToCard ,decareaseItemToCard ,removeItemFromCard } from "./item-utils";
 
 const initialState = {
-  item: 0,
+  food:[],
+  user:[],
+  foods:[], 
+  
+
 };
 
 const cardData = (state = initialState, action) => {
+  const payload = action.payload
   switch (action.type) {
-    case ITEM_TYPE.SUM_OF_TWO_NUMBERS:
+    case ITEM_TYPE.ADD_FOOD:
       return {
         ...state,
-        item: state.item + 1,
+        food: addItemToCard(state.food, payload)
+
       };
-    case ITEM_TYPE.MINUS_OF_TWO_NUMBERS:
-      return {
-        ...state,
-        item: state.item - 1,
-      };
+
+      case ITEM_TYPE.DECAREASE_FOOD:
+        return {
+          ...state,
+          food: decareaseItemToCard(state.food, payload)
+  
+        };
+
+        
+        case ITEM_TYPE.REMOVE_FOOD:
+          return {
+            ...state,
+            food: removeItemFromCard(state.food, payload)
+            
+          };  
+          
+        case ITEM_TYPE.USER_DATA:
+          return {
+            ...state,
+            user:state.user = payload
+    
+          };  
+
+        case ITEM_TYPE.FOODS_DATA:
+          return {
+            ...state,
+            foods: state.foods = payload
+    
+          };    
+
     default:
       return state;
   }

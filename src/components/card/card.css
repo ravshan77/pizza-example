@@ -2,3 +2,52 @@
   display: flex;
   justify-content: space-between;
 }
+
+.flex-between_Information{
+  display: flex;
+  flex-direction: column ;
+  justify-content: space-around;
+  height: 100%;
+  
+}
+
+.store_card_img{
+  width: 100px;
+}
+
+.label{
+  height: 80px;
+}
+
+.cost{
+  text-align: center;
+}
+
+.andAndMoreInfo{
+  color: white;
+  font-size: 15px;
+  width: 110px;
+  height: 40px; 
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background-color: orange;
+  box-sizing: border-box;
+}
+
+.andAndMoreInfo:hover{
+  background-color: white;
+  color: orange;
+  border: solid 1px orange;
+  transition: all 1s;
+  box-shadow: 0 0 5px 1px orange;
+}
+
+.discount{
+  text-decoration: line-through;
+  color:black;
+}
+
+.dic{
+  color: orange;
+}

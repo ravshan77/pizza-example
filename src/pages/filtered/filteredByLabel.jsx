@@ -4,10 +4,12 @@ import CardItem from "../../components/card/card";
 import "./filteredPageCard.css"
 
 
-const FilteredByCost = ( {props,data}) => {
+const FilteredByLabel = ( {props,data}) => {
   const { match, history } = props;
 
-const filteredByCost=data && data.filter((d)  =>  d.totalWeight.toFixed(3)*100 <= match.params.id )
+
+const filteredByLabel=data && data.filter((d)  =>  d.label === match.params.id )
+
 
 
   return (
@@ -20,20 +22,22 @@ const filteredByCost=data && data.filter((d)  =>  d.totalWeight.toFixed(3)*100 <
           {" "}
           Go back{" "}
         </Button>
-        <h1 className="pizzasText">ᖴIᒪTEᖇ ᑭᖇOᗪᑌᑕT</h1>
+        <h1 className="pizzasText">Filter Product</h1>
       <div className="filteredCard">
 
-          {filteredByCost ? (
-            filteredByCost.map((item) => {
+        
+          {filteredByLabel ? (
+            filteredByLabel.map((item) => {
               return <CardItem key={item.id} {...item} />
             })
           ) : (
-            <h1 style={{textAlign: 'center',color:"orange"}}> Bunday narxda chiqarilgan mahsulotlarimizimiz mavjud emas</h1>
+            <h1 style={{textAlign: 'center',color:"orange"}}> Bunday nomda chiqarilgan mahsulotlarimizimiz mavjud emas</h1>
           )}
+
 
       </div>
     </div>  
   );
 };
 
-export default FilteredByCost;
+export default FilteredByLabel;
