@@ -31,5 +31,9 @@ export const foodsData = (item) => ({
   payload: item,
 })
 
+export const promaCode = (item) => ({
+  type: ITEM_TYPE.PROMO_CODE,
+  payload: item,
+})
 
 

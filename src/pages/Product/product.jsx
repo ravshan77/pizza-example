@@ -29,7 +29,7 @@ const Product = ({props,data}) => {
   const filterData=data && data.filter((d)=> d.label === match.params.id)
   
   console.log("produktdagi kegan data" , data)
-
+console.log(filterData)
   return (
     <div>
       <Button variant="outlined" color="primary" className={classes.goBack} onClick={handleGoBack}>

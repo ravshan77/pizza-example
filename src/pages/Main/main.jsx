@@ -5,6 +5,7 @@ import CarouselEffect from "../../components/Carousel/Carousel"
 import "./main.css";
 
 const Main = ({ pizza }) => {
+
   return (
     <div className="mainPage">
       <div className="carusel">

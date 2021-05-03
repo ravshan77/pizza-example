@@ -34,3 +34,18 @@ export const removeItemFromCard = (food, newFood) =>{
         item.label === newFood.label ? { ...item, count: item.count - 100} : item
     );
 };
+
+export const promaCodeMinusCost = (food, newFood) =>{
+
+    const isExist =  food.find((food) => food.label === newFood.label)
+
+    if (isExist) {
+       return food.map((item) => {
+        return item.label === newFood.label 
+            ? { ...item, cost: item.cost - newFood  } : item;
+        });
+    }
+    return [...food, { ...newFood, count: 1, cost: newFood.totalWeight  }];
+    
+      
+};

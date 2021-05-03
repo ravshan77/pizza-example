@@ -5,17 +5,24 @@ import Product from "./pages/Product/product";
 import FilteredByLabel from "./pages/filtered/filteredByLabel"
 import FilteredByCost from "./pages/filtered/filteredByCost"
 import FilteredByDate from "./pages/filtered/filteredByDate";
-import React from 'react';
+import React,{ lazy, Suspense } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import Pizza from "./pages/Pizza/pizza";
-import Drink from "./pages/Drink/drink";
-import { useSelector } from "react-redux"
+import Pizza from "./pages/pizza/pizza";
+import Drink from "./pages/drink/drink";
 import Food from "./pages/food/food";
-// import Main from "./pages/Main/main";
-// import { useFetch } from "./components/useFetch"
-// import { useEffect,useState } from "react"
-// import { CircularProgress } from "@material-ui/core";
-// import Backdrop from '@material-ui/core/Backdrop';
+import Cake from "./pages/cake/cake";
+import { useSelector } from "react-redux"
+import GoToStore from "./pages/goToStore/goToStore"
+import Login from "./pages/Reg/login"
+import Footer from "./components/footer/footer"
+import Example from "./components/example"
+// import Card from "./components/mobx/card"
+// import List from "./components/mobx/list"
+import { observable ,action } from "mobx"
+import Memo from "./components/hook/memo";
+
+// const List =lazy(() => import("./components/mobx/list"))
+// const Card =lazy(() => import("./components/mobx/card"))
 
 
 const useStyles = makeStyles((theme) => ({
@@ -29,36 +36,60 @@ const useStyles = makeStyles((theme) => ({
 
 function App() {
   
-  const {foods} = useSelector((state) => state.cardData);
+  // const {foods} = useSelector((state) => state.cardData);
 
   
-  console.log("stordan App ga kegan foods",foods)
+  // console.log("stordan App ga kegan foods",foods)
   
-  const classes = useStyles();
+  // const classes = useStyles();
+
 
 
 
   return (
     <div className="App">
-
+      <Memo />
+      {/* <Suspense fallback={<h1>loading...</h1>} >
+        <Card />
+        <List />
+      </Suspense> */}
+{/* 
       <Header />
       <Switch>
 
         <Route 
           path="/" 
           exact 
-          render={() => <Pizza />} />
+          render={(props) => <Pizza props={props} />} />
 
         <Route 
           path="/drink" 
           exact 
-          render={() => <Drink  />} />
+          render={(props) => <Drink props={props} />} />
 
         <Route 
           path="/food" 
           exact 
-          render={() => <Food  />} />  
-              
+          render={(props) => <Food props={props} />} />
+
+        <Route 
+          path="/cake" 
+          exact 
+          render={(props) => <Cake props={props}  />} />
+
+        <Route
+          path="/goToStore"
+          render={(props) => {
+            return <GoToStore props={props}  />;
+          }}
+        />
+
+        <Route
+          path="/login"
+          render={(props) => {
+            return <Login props={props}  />;
+          }}
+        />  
 
         <Route
           path="/product/:id"
@@ -87,8 +118,9 @@ function App() {
           }}
         />
 
-      </Switch>
-      {/* <Footer /> */}
+      </Switch> */}
+      {/* <Footer/> */}
+      {/* <Example/> */}
     </div>
   );
 }

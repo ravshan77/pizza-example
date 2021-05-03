@@ -1,5 +1,5 @@
 import { ITEM_TYPE } from "./item-type";
-import { addItemToCard ,decareaseItemToCard ,removeItemFromCard } from "./item-utils";
+import { addItemToCard ,decareaseItemToCard ,removeItemFromCard, promaCodeMinusCost } from "./item-utils";
 
 const initialState = {
   food:[],
@@ -44,9 +44,17 @@ const cardData = (state = initialState, action) => {
         case ITEM_TYPE.FOODS_DATA:
           return {
             ...state,
-            foods: state.foods = payload
+            foods: payload
     
-          };    
+          };
+          
+        case ITEM_TYPE.PROMO_CODE:
+          return {
+            ...state,
+            food: promaCodeMinusCost(state.food, payload)
+    
+          };  
+      
 
     default:
       return state;

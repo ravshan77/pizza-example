@@ -1,6 +1,4 @@
-// import React from "react";
-
-
+import React from "react";
 
 // USEREF HOOKI ORQALI FORUM BILAN ISHLASH
 // import { useRef, useState } from "react"
@@ -15,8 +13,6 @@
 //         password:""
 //     });
 
-
-    
 //     const handleClick=(e)=>{
 //         e.preventDefault();
 //         setInfoForum((preveState) => ({
@@ -25,23 +21,22 @@
 //             password: password.current.value
 //         }))
 //     }
-    
+
 //     console.log(infoForum)
-    
 
 //     return (
 //         <div>
 //             <form>
 //                 <label>fname</label>
-//                 <input name="fname" type="text"  
-//                 ref={fname}                
+//                 <input name="fname" type="text"
+//                 ref={fname}
 //                 /> <br/>
 
 //                 <label>password</label>
-//                 <input 
+//                 <input
 //                 name="password" type="password"
 //                 ref={password}
-                
+
 //                 />
 //                 <button onClick={handleClick}>sendData</button>
 //             </form>
@@ -50,10 +45,6 @@
 // }
 
 // export default Example;
-
-
-
-
 
 // USESTSTE HOOKI ORQALI FORM BILAN ISHLASH
 
@@ -66,8 +57,6 @@
 //         password:""
 //     });
 
-
-    
 //     const handleClick=(e)=>{
 //         e.preventDefault()
 //         console.log(infoForum)
@@ -85,17 +74,17 @@
 //         <div>
 //             <form>
 //                 <label>fname</label>
-//                 <input name="fname" type="text" 
-//                 value={infoForum.fname} 
+//                 <input name="fname" type="text"
+//                 value={infoForum.fname}
 //                 onChange={handleChange}
-                
+
 //                 /> <br/>
 //                 <label>password</label>
-//                 <input 
-//                 name="password" type="password" 
-//                 value={infoForum.password} 
-//                 onChange={handleChange} 
-                
+//                 <input
+//                 name="password" type="password"
+//                 value={infoForum.password}
+//                 onChange={handleChange}
+
 //                 />
 //                 <button onClick={handleClick}>sendData</button>
 //             </form>
@@ -104,3 +93,73 @@
 // }
 
 // export default Example;
+
+// const Example = () => {
+//   const colors = [
+//     { color: "red" },
+//     { color: "blue" },
+//     { color: "green" },
+//     { color: "yellow" },
+//     { color: "red" },
+//     { color: "red" },
+//     { color: "green" },
+//     { color: "green" },
+//   ];
+
+  // necha xil rang bulsa shuncha uzgaruvchi ochamiz
+
+//   const [value, setValue]=React.useState("")
+
+//   let red = 0;
+//   let blue = 0;
+//   let green = 0;
+//   let yellow = 0;
+
+//   const handleColor = () =>{
+//     if (red > blue && red > green && red > yellow) {
+//         setValue(red)
+//         console.log( " red eng ko'p qatnashgan rang: ",red ," ta")
+//     } else if ( blue > red && blue > green && blue > yellow){
+//         setValue(blue)
+//         console.log(" blue eng ko'p qatnashgan rang: ",blue ," ta")
+//     } else if ( green > red && green > blue && green > yellow){
+//         setValue(green)
+//         console.log(" green eng ko'p qatnashgan rang: ",green ," ta")
+//     } else{
+//         setValue(yellow)
+//         console.log(" yellow eng ko'p qatnashgan rang: ",yellow ," ta")
+//     }
+//   }
+
+
+//   return (
+//       <div>
+//       {colors.map((cols) => {
+//           if (cols.color == "red") {
+//               red++;
+//             } else if (cols.color == "blue") {
+//                 blue++;
+//             } else if (cols.color == "green") {
+//                 green++;
+//             } else if (cols.color == "yellow") {
+//                 yellow++;
+//             }
+//             console.log("ranglar ", red, blue, green, yellow);
+            
+            
+//         }
+//         )
+        
+//     }
+
+// <h1>jjjjjjjjj{value}</h1>
+//     { colors && handleColor()}
+      
+      
+//     </div>
+//   );
+// };
+
+// export default Example;
+
+

@@ -1,0 +1,41 @@
+.login_text {
+  color: orange;
+  text-align: center;
+}
+
+.login {
+  width: 80%;
+  margin: 25px auto;
+  border-radius: 20px;
+  background-color: orange;
+  display: flex;
+  justify-content: center;
+}
+
+.login_item {
+  width: 40%;
+}
+
+.form_login {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.inputs_login {
+  width: 290px;
+  height: 40px;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+}
+
+.label_text {
+  color: white;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+}

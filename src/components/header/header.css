@@ -1,39 +1,40 @@
-.SubStore{
+.SubStore {
   width: 100%;
   height: 1px;
   position: relative;
   display: flex;
+  color: blue;
 }
 
-.modal_by{
+.modal_by {
   background-color: black;
   position: relative;
   width: 65%;
   height: 100%;
 }
 
-.modal_body{
+.modal_body {
   display: flex;
-  justify-content:center;
+  justify-content: center;
   background-color: white;
-  position:absolute;
+  position: absolute;
   width: 100%;
-  height:650px;
+  height: 650px;
   z-index: 10;
 }
 
-.modal_byoff{
+.modal_byoff {
   display: none;
 }
 
-.modal{
+.modal {
   width: 80%;
   height: 100%;
   display: flex;
   margin: auto;
   align-items: center;
-  justify-content:center;
-  flex-direction: column; 
+  justify-content: center;
+  flex-direction: column;
   border-radius: 20px;
 }
 
@@ -50,7 +51,7 @@
   background-color: #fff;
 } */
 
-.form{
+.form {
   width: 90%;
   height: 80%;
   display: flex;
@@ -61,7 +62,7 @@
   background-color: orange;
 }
 
-.inputs{
+.inputs {
   width: 290px;
   height: 50px;
   padding: 10px;
@@ -71,7 +72,7 @@
   border: none;
 }
 
-.offModalX{
+.offModalX {
   position: absolute;
   top: 10px;
   right: 30px;
@@ -85,12 +86,12 @@
   color: white;
 }
 
-.payH3{
+.payH3 {
   font-size: 18px;
   font-family: serif;
 }
 
-.sendBtn{
+.sendBtn {
   width: 80px;
   height: 35px;
   border-radius: 5px;
@@ -102,38 +103,34 @@
   /* transform: translateY(-50%); */
 }
 
-
-.SubStoreCard_on{
+.SubStoreCard_on {
   position: absolute;
   transition: right 3000ms;
   right: 0px;
   width: 35%;
   height: 100%;
-  background-color:white;
+  background-color: white;
   z-index: 10;
 }
 
-
-.SubStoreCard_off{
+.SubStoreCard_off {
   display: none;
 }
-
 
 .full-width {
   width: 100% !important;
   text-align: center;
 }
 
-.iconHeder{
+.iconHeder {
   width: 4%;
 }
-.iconHederImg{
+.iconHederImg {
   width: 100%;
   /* padding-left:10px ; */
 }
 
-
-.Pay_page{
+.Pay_page {
   margin: 7px auto;
   height: 40px;
   display: flex;
@@ -145,7 +142,7 @@
   bottom: 0;
 }
 
-.Pay_box{
+.Pay_box {
   width: 60%;
   height: 90%;
   display: flex;
@@ -156,7 +153,7 @@
   text-align: center;
 }
 
-.total{
+.total {
   width: 55%;
   font-size: 18px;
   font-weight: bolder;
@@ -164,7 +161,7 @@
   color: white;
 }
 
-.pay_button{
+.pay_button {
   width: 50%;
   height: 90%;
   margin-right: 2px;
@@ -176,4 +173,10 @@
   background-color: white;
   cursor: pointer;
   color: orange;
+}
+
+.hook_form {
+  width: 550px;
+  height: 550px;
+  background-color: yellow;
 }
