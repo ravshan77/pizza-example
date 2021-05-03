@@ -16,13 +16,19 @@ import GoToStore from "./pages/goToStore/goToStore"
 import Login from "./pages/Reg/login"
 import Footer from "./components/footer/footer"
 import Example from "./components/example"
-// import Card from "./components/mobx/card"
-// import List from "./components/mobx/list"
-import { observable ,action } from "mobx"
-import Memo from "./components/hook/memo";
-
+import Card from "./components/mobx/card"
+import List from "./components/mobx/list"
 // const List =lazy(() => import("./components/mobx/list"))
 // const Card =lazy(() => import("./components/mobx/card"))
+import { observable ,action } from "mobx"
+import Memo from "./components/hook/memo";
+import ChildComponent from "./components/context/ChildComponent"
+import ParentComponent from "./components/context/ParentComponent"
+import ThemeProvider from "./components/context/ThemeProvider"
+import ToggleBtn from "./components/context/ToggleBtn"
+import CallBack from "./components/hook/callBack"
+import ThemeComponenet from "./components/mobx and context exchange/ThemeComponenet"
+
 
 
 const useStyles = makeStyles((theme) => ({
@@ -48,7 +54,14 @@ function App() {
 
   return (
     <div className="App">
-      <Memo />
+      {/* <CallBack /> */}
+      <ThemeComponenet />
+      {/* <ThemeProvider>
+        <ChildComponent />
+        <ParentComponent />
+        <ToggleBtn />
+      </ThemeProvider> */}
+      {/* <Memo /> */}
       {/* <Suspense fallback={<h1>loading...</h1>} >
         <Card />
         <List />

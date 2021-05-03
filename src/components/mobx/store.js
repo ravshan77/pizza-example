@@ -1,34 +1,34 @@
-// import { observable ,action } from "mobx"
+import { observable ,action } from "mobx"
 
-// const store = observable({
-//     users:[],
-// })
+const store = observable({
+    users:[],
+})
 
-// const getUsers = action(() => {
-//     fetch("https://randomuser.me/api/?results=10")
-//     .then((res) => res.json())
-//     .then((data) => {
-//         console.log(data.results);
-//         store.users = data.results;
-//     })
-//     .catch((err) => console.log(err));
-// });
+const getUsers = action(() => {
+    fetch("https://randomuser.me/api/?results=10")
+    .then((res) => res.json())
+    .then((data) => {
+        console.log(data.results);
+        store.users = data.results;
+    })
+    .catch((err) => console.log(err));
+});
 
-// getUsers();
+getUsers();
 
-// export const getUserLength = () =>{
-//     return store.users.length;
-// };
+export const getUserLength = () =>{
+    return store.users.length;
+};
 
-// export const getMale = () =>{
-//     return store.users.filter((user) => user.gender === "male").length
-// };
+export const getMale = () =>{
+    return store.users.filter((user) => user.gender === "male").length
+};
 
-// export const deleteUser = (payload) => {
-//     return store.users = store.users.filter((user) => user.cell !== payload)
-// };
+export const deleteUser = (payload) => {
+    return store.users = store.users.filter((user) => user.cell !== payload)
+};
 
-// export default store;
+export default store;
 
 
 

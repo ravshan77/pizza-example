@@ -1,3 +1,5 @@
+// Vazifa: mobxdagi random users exampleni context orqali  amalga oshirish
+
 import React,{ Component, createContext } from 'react'
 
 export const ThemeContext = createContext();
@@ -22,29 +24,3 @@ export default class ThemeProvider extends Component{
             }
 }
 
-
-
-
-
-
-
-
-
-// const ThemeProvider = () => {
-
-    
-
-//     const [themes,setTheme] =useStat(
-//         {
-//             theme:true,
-//             light: { textColor: '#555' , ui: "#ddd" , bg: "#333" },
-//             dark: { textColor: '#ddd' , ui: "#333" , bg: "#555"},
-//         }
-//     )
-
-//     const ThemeToggle =()=>{
-//         setTheme(
-//             {theme: !this.state.theme}
-//         )
-//     }
-// }
