@@ -1,26 +1,42 @@
 // Vazifa: mobxdagi random users exampleni context orqali  amalga oshirish
 
-import React,{ Component, createContext } from 'react'
+import React,{ createContext } from 'react'
 
-export const ThemeContext = createContext();
+export const userContext = createContext();
 
-export default class ThemeProvider extends Component{
-    state = {
-            theme: true,
-            light: { textColor: '#555' , ui: "#ddd" , bg: "#333" },
-            dark: { textColor: '#ddd' , ui: "#333" , bg: "#555"},
-        };
+const ThemeProvider =()=>{
+    
+    const getUsers = action(() => {
+        fetch("https://randomuser.me/api/?results=10")
+        .then((res) => res.json())
+        .then((data) => {
+            console.log(data.results);
+            store.users = data.results;
+        })
+        .catch((err) => console.log(err));
+    });
+    
+    getUsers();    
+        
+    
+    export const getUserLength = () =>{
+        return store.users.length;
+    };
 
-            themeToggle = ()=> {
-                this.setState({ theme: !this.state.theme })
-            };
+    export const getMale = () =>{
+        return store.users.filter((user) => user.gender === "male").length
+    };
 
-            render(){
-                return(
-                    <ThemeContext.Provider value={{ ...this.state, themeToggle: this.themeToggle }}>
-                        {this.props.children}
-                    </ThemeContext.Provider>
-                )
-            }
+    export const deleteUser = (payload) => {
+        return store.users = store.users.filter((user) => user.cell !== payload)
+    };
+        return (
+            <div>
+            <ThemeContext.Provider value={getUserLength, getMale, deleteUser }>
+                {this.props.children}
+            </ThemeContext.Provider>
+            </div>
+        )
 }
 
+export default ThemeProvider;
