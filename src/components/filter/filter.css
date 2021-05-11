@@ -1,0 +1,13 @@
+@media (min-width: 320px) {
+  .margin {
+    width: 100px;
+    /* background-color: red; */
+  }
+}
+
+@media (min-width: 568px) {
+  .margin {
+    width: 150px;
+    /* background-color: red; */
+  }
+}

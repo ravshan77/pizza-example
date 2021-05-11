@@ -1,70 +1,72 @@
-.product{
-    width: 80%;
-    height: 100vh;
-    margin: 0 auto;
-    box-shadow: black 0 0 1px;
-    color: white;
-    background-color: orange;
-    border-radius: 5px;
+.product {
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+  box-shadow: black 0 0 1px;
+  color: white;
+  background-color: orange;
+  border-radius: 5px;
 }
-.labelName{
-    text-align: center;
-    color: white;
-    border: 1px solid white;
-    margin-bottom: 15px;
-}
-
-.d-flexx{
-    display: flex;
-    width: 100%;
-    height: 500px;
+.labelName {
+  text-align: center;
+  color: white;
+  border: 1px solid white;
+  margin-bottom: 15px;
+  color: whitesmoke;
 }
 
-.imgeItem{
-    width: 50%;
+.d-flexx {
+  display: flex;
+  width: 100%;
+  height: 500px;
 }
 
-.infoItem{
-    width: 50%;
-    position: relative;
+.imgeItem {
+  width: 50%;
 }
 
-.br{
-    /* border: 1px solid black;  */
+.b {
+  border: 1px solid black;
 }
 
-.imgBox{
-    width: 80%;
-    display: flex;
-    margin:0px auto;
+.infoItem {
+  width: 50%;
+  position: relative;
+  height: 100%;
+  /* overflow-x: scroll;
+  overflow-y: hidden; */
 }
 
-.imgg{
-    width: 100%;
-    box-shadow: 0 0 0px 3px white;
-    border-radius: 18px;
+.information {
+  text-align: center;
+  color: white;
 }
 
-.ing_text{
-    width: 90%;
-    display: flex;
-    margin: 5px auto;
+.imgBox {
+  width: 80%;
+  display: flex;
+  margin: 0px auto;
 }
 
-.h3{
-    color: white;
+.imgg {
+  width: 100%;
+  box-shadow: 0 0 0px 3px white;
+  border-radius: 18px;
 }
 
+.h3 {
+  color: white;
+}
 
-.addtoStore{
-    position: absolute;
-    bottom: 0px;
-    right: 30px;
-    width: 100px;
-    height: 30px;
-    border-radius: 5px;
-    background-color: white;
-    color: orange;
-    outline: none;
-    border: none;
+.addtoStore {
+  position: absolute;
+  bottom: 5px;
+  right: 30px;
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: white;
+  color: orange;
+  outline: none;
+  border: none;
 }

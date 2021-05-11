@@ -3,51 +3,55 @@
   justify-content: space-between;
 }
 
-.flex-between_Information{
+.flex-between_Information {
   display: flex;
-  flex-direction: column ;
+  flex-direction: column;
   justify-content: space-around;
   height: 100%;
-  
 }
 
-.store_card_img{
+.store_card_img {
   width: 100px;
 }
 
-.label{
+.label {
   height: 80px;
 }
 
-.cost{
+.cost {
   text-align: center;
 }
 
-.andAndMoreInfo{
-  color: white;
+.andAndMoreInfo {
+  /* color: white; */
   font-size: 15px;
   width: 110px;
-  height: 40px; 
+  height: 40px;
   border-radius: 8px;
   border: none;
   outline: none;
-  background-color: orange;
-  box-sizing: border-box;
-}
-
-.andAndMoreInfo:hover{
   background-color: white;
-  color: orange;
-  border: solid 1px orange;
-  transition: all 1s;
-  box-shadow: 0 0 5px 1px orange;
+  box-sizing: border-box;
+  cursor: pointer;
+  /* border: 1px solid black; */
 }
 
-.discount{
+.andAndMoreInfo:hover {
+  background-color: white;
+  transition: all 0.5s;
+  box-shadow: 0 0 2px 1px black;
+}
+
+.discount {
   text-decoration: line-through;
-  color:black;
+  color: black;
 }
 
-.dic{
+.dic {
   color: orange;
+}
+
+.card-storeIcon {
+  width: 40%;
+  height: 100%;
 }

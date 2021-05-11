@@ -7,11 +7,14 @@ import Select from "@material-ui/core/Select";
 import InputBase from "@material-ui/core/InputBase";
 import { Button, Typography } from "@material-ui/core";
 import { Link } from "react-router-dom";
+import "./filter.css";
 
 const BootstrapInput = withStyles((theme) => ({
   root: {
     "label + &": {
       marginTop: theme.spacing(3),
+      border:"1px solid green",
+      width:"90%",
     },
   },
   input: {
@@ -44,11 +47,15 @@ const BootstrapInput = withStyles((theme) => ({
 
 const useStyles = makeStyles((theme) => ({
   margin: {
-    margin: theme.spacing(1.5),
-    width:"140px"
+    // margin: theme.spacing(1.5),
+    width:"100px",
+    // height:"100%"
   },
   card: {
-    marginBottom: theme.spacing(5),
+    width:"100%",
+    border:"1px solid red",
+    // height: "160px",
+    
   },
   center: {
     textAlign: "center",
@@ -56,9 +63,16 @@ const useStyles = makeStyles((theme) => ({
   
   filterBox:{
     display:"flex",
-    height:"130px",
-    // backgroundColor:"orange"
-  }
+    width:"auto",
+    justifyContent: "center",
+    // height:"40%",
+    // backgroundColor:"orange"  
+  },
+
+  inputBtn:{
+    // backgroundColor:"orange",
+    width:"90%"
+  },
 }));
 
 export default function Filter() {
@@ -109,16 +123,17 @@ export default function Filter() {
         
         {/* ////// */}
 
-        <div>
-          <FormControl className={classes.margin}>  
+        <div className="margin">
+          <FormControl>  
             <InputLabel htmlFor="demo-customized-textbox">Cost</InputLabel>
             <BootstrapInput
               value={cost}
               onChange={handleChangeCost}
               id="demo-customized-textbox"
+              className={classes.inputBtn}
             />
-            {(cost) && 
-            (<Button onClick={handleFilterCost} variant="outlined" color="primary">
+            {(cost) &&
+            (<Button className={classes.inputBtn} onClick={handleFilterCost} variant="outlined" color="primary">
                 <Link to={`/filteredByCost/${cost}`}>Costs</Link>
               </Button>)
             }
@@ -127,24 +142,25 @@ export default function Filter() {
 
         {/* /////// */}
 
-        <div>
-          <FormControl className={classes.margin}>
+        <div className="margin">
+          <FormControl>
             <InputLabel htmlFor="demo-customized-textbox">Name</InputLabel>
             <BootstrapInput
               value={label}
               onChange={handleChangelabel}
               id="demo-customized-textbox"
+              className={classes.inputBtn}
             />
             {(label) && 
-            (<Button onClick={handleFilterLabel} variant="outlined" color="primary">
+            (<Button className={classes.inputBtn} onClick={handleFilterLabel} variant="outlined" color="primary">
                 <Link to={`/filteredByLabel/${label.replace(/\b(\w)/g, s => s.toUpperCase())}`}>Labels</Link>
               </Button>)
             }
           </FormControl>
         </div>
 
-        <div>
-          <FormControl className={classes.margin}>
+        <div className="margin">
+          <FormControl>
             <InputLabel id="demo-customized-select-label">Date</InputLabel>
             <Select
               labelId="demo-customized-select-label"
@@ -152,6 +168,7 @@ export default function Filter() {
               value={date}
               onChange={handleChangeDate}
               input={<BootstrapInput />}
+              className={classes.inputBtn}
             >
               <MenuItem value="">
                 <em>None</em>
@@ -163,7 +180,7 @@ export default function Filter() {
               <MenuItem value={"60"}>60 minutes</MenuItem>
             </Select>
             {(date) && (
-              <Button onClick={handleFilterDate} variant="outlined" color="primary">
+              <Button className={classes.inputBtn} onClick={handleFilterDate} variant="outlined" color="primary">
                 <Link to={`/filteredByDate/${date}`}>Dates</Link>
               </Button>
             )}

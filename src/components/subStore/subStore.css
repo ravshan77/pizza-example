@@ -1,176 +1,282 @@
-.Store{
-    /* border: black solid 1px; */
-    width: 100%;
-    height: 655px;
-    overflow-X: scroll;
-    position: relative;
-    box-shadow: 0 0 5px rgb(48, 43, 43);
-    background-color: white;
-  }
-
-.Store_text{
-    text-align: center;
-    margin-bottom: 15px;
-    color: orange;
+.storeCard {
+  width: 85%;
+  height: 27%;
+  margin: 15px auto;
+  display: flex;
+  justify-content: space-between;
+  /* padding: 10px; */
 }
 
-.d-flex{
-    display: flex;
-    border: solid 1px rgb(241, 220, 220);
-    width: 100%;
-    height: 100%;
-    padding: 5px;
+.bottom-line {
+  width: 85%;
+  margin: 0 auto;
 }
 
-/* IMG BOX img */
-
-.img_Box{
-    width: 20%;
-    border: solid 1px rgb(196, 175, 175);
-    border-radius: 5px;
-    display: flex;
+.b {
+  border: 1px solid black;
 }
 
-.img{
-    width: 100%;
-    height: 100%;
-    margin:0 auto;
+.img-block {
+  width: 27%;
 }
 
-/* INFO BOX title and text */
-
-.info_Box{
-    width: 30%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
+.store-img {
+  width: 100%;
+  height: 97%;
+  border-radius: 5%;
 }
 
-.title{
-    padding: 5px;
+.functional-block {
+  width: 71%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.cost{
-    padding: 5px;
+.top-item {
+  height: 50%;
+  display: flex;
+  justify-content: space-between;
+  /* flex-direction: column; */
 }
 
-/* BUTTON BOX buttons */
-
-.buttons_Box{
-    width: 10%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+.data-label {
+  width: 90%;
+  /* height: 100%; */
+  word-wrap: break-word;
 }
 
-.button_group{
-    width: 60%;
-    height: 100%;
-    border-radius: 30px;
-    display: flex;
-    background-color: #f3e9f7;
-    flex-direction: column;
-    background-color: orange;
-    border: orange solid 1.2px;
-
+.data-delete {
+  width: 10%;
+  height: 100%;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
 }
 
-.button_minus{
-    width: 100%;
-    height: 100%;
-    border: none;
-    outline: none;
-    border-radius: 50%;
-    cursor: pointer;
-    background-color: white;
-    color: orange;
+.bottomItem {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
 }
 
-.button_pilus{
-    width: 100%;
-    height: 100%;
-    border:none;
-    outline: none;
-    border-radius: 50%;
-    cursor: pointer;
-    background-color: white;
-    color: orange;
+.buttonBlock {
+  width: 50%;
+  height: 70%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
-.pilusMinus{
-    font-size: 20px;
-    font-weight: bolder;
+.button-box {
+  width: 100%;
+  /* height: 100%; */
+  /* background-color: rgb(235, 228, 228); */
+  background-color: orange;
+  display: flex;
+  justify-content: space-around;
+  border-radius: 15px;
+  align-items: center;
+  font-weight: bolder;
+  font-family: cursive;
 }
 
-.count{
-    color: white;
-    font-size:1.5rem;
+.pilusMinus-Btn {
+  width: 25%;
+  height: 80%;
+  background-color: white;
+  border-radius: 50%;
+  outline: none;
+  border: none;
 }
 
-/* COLLECED BOX yig'indi cost+- */
-
-.collected_Box{
-    width: 25%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    /* color: orange;    */
+.subStore-cost{
+  font-size:100%;
 }
 
-.totalPrice{
-    color: orange;
+.mr-top {
+  margin-top: 55px;
 }
 
-/* PRODUCT INFO BUTTON */
-
-.productInfo_Box{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 10%;
+.costBlock {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 
-.infoButton{
-    width: 40px;
-    height: 25px;
-    border:none;
-    outline: none;
-    border-radius: 7px;
-    cursor: pointer;
-    background-color: orange;
+.data-label {
+  font-weight: bolder;
+  font-family: cursive;
+  /* font-style: oblique; */
 }
 
-.infoButtton{
-   font-size: 16px;
+/* .Store {
+  width: 100%;
+  height: 300px;
+  overflow-x: scroll;
+  overflow-y: unset;
+  position: relative;
+  box-shadow: 0 0 5px rgb(48, 43, 43);
+  background-color: white;
+  z-index: 100;
 }
 
-.infoText{
-    color: white;
-    width: 100%;
+.Store_text {
+  text-align: center;
+  margin-bottom: 15px;
+  color: orange;
 }
 
-/* DELETE CARD BOX X  */
-
-.deleteCard_Box{
-    width: 5%;
-    position: relative;
+.d-flex {
+  display: flex;
+  border: solid 1px rgb(241, 220, 220);
+  width: 100%;
+  height: 100%;
+  padding: 5px;
 }
 
-.delete_btn{
-    width: 80%;
-    position: absolute;
-    right: 0;
-    top: 0;
-    cursor: pointer;    
-    outline: none;  
-    border: solid 1px orange;  
-    background-color: white;
+
+.img_Box {
+  width: 20%;
+  border: solid 1px rgb(196, 175, 175);
+  border-radius: 5px;
+  display: flex;
 }
 
-.x{
-    color:orange;
+.img {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
 }
+
+.info_Box {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  padding: 5px;
+}
+
+.cost {
+  padding: 5px;
+}
+
+
+.buttons_Box {
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.button_group {
+  width: 60%;
+  height: 100%;
+  border-radius: 30px;
+  display: flex;
+  background-color: #f3e9f7;
+  flex-direction: column;
+  background-color: orange;
+  border: orange solid 1.2px;
+}
+
+.button_minus {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: white;
+  color: orange;
+}
+
+.button_pilus {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: white;
+  color: orange;
+}
+
+.pilusMinus {
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.count {
+  color: white;
+  font-size: 1.5rem;
+}
+
+
+.collected_Box {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.totalPrice {
+  color: orange;
+}
+
+
+.productInfo_Box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10%;
+}
+
+.infoButton {
+  width: 40px;
+  height: 25px;
+  border: none;
+  outline: none;
+  border-radius: 7px;
+  cursor: pointer;
+  background-color: orange;
+}
+
+.infoButtton {
+  font-size: 16px;
+}
+
+.infoText {
+  color: white;
+  width: 100%;
+}
+
+
+.deleteCard_Box {
+  width: 5%;
+  position: relative;
+}
+
+.delete_btn {
+  width: 80%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+  outline: none;
+  border: solid 1px orange;
+  background-color: white;
+}
+
+.x {
+  color: orange;
+} */

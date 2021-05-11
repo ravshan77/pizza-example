@@ -36,20 +36,20 @@ console.log(filterData)
         Go back
       </Button>
       {filterData && filterData.map((item) => {
-        return ( <div className="product br" key={item.label}>
-                    <h1 className="labelName br">{item.label}</h1>
-                  <div className="d-flexx br">
-                    <div className="imgeItem br">
-                      <div className="imgBox br">
-                        <img  className="imgg br"src={item.image}/>
+        return ( <div className="product b" key={item.label}>
+                    <h1 className="labelName">{item.label}</h1>
+                  <div className="d-flexx">
+                    <div className="imgeItem">
+                      <div className="imgBox">
+                        <img  className="imgg"src={item.image}/>
                       </div>
                     </div>
-                    <div className="infoItem br">
-                      <div className="br">
+                    <div className="infoItem">
+                      <div>
                         <h3 style={{textAlign: 'center', color: 'white'}}>ＩＮＧＲＥＤＩＥＮＴＳ</h3>
-                        {item.ingredients.map((ing) => <div className="ing_text"><h4>{ing.text}</h4></div>)}
+                        {item.ingredients.map((ing) => <div><h4>{ing.text}</h4></div>)}
                       </div> 
-                        <h3 style={{textAlign: 'center', color: 'white'}}>ＩＮＦＯＲＭＡＴＩＯＮ</h3>
+                        <h3 className="information">ＩＮＦＯＲＭＡＴＩＯＮ</h3>
                         <br/>
                         <h3 className="h3">Label: {item.label}</h3>
                         <h3 className="h3">Source: {item.source}</h3>
@@ -57,7 +57,10 @@ console.log(filterData)
                         <h3 className="h3">Calories: {item.calories}</h3>
                         <h3 className="h3">TotalWeight: {item.totalWeight}</h3>
                         <h3 className="h3">TotalTime: {item.totalTime}</h3>
-                      <button className="addtoStore" onClick={()=> dispatch(addFood({...item}))}><h3>ᴀᴅᴅ ᴛᴏ ᴄᴀʀᴛ</h3></button>
+                      <button className="addtoStore" onClick={()=> dispatch(addFood({...item}))}>
+                        {/* <h3>ᴀᴅᴅ ᴛᴏ ᴄᴀʀᴛ</h3> */}
+                        <img className="card-storeIcon" src="http://cdn.onlinewebfonts.com/svg/download_129213.png" />
+                      </button>
                       </div>   
                   </div> 
                 </div> )

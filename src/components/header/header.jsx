@@ -5,10 +5,10 @@ import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
+import { Link } from "react-router-dom";
 import IconButton from "@material-ui/core/IconButton";
 import MenuItem from "@material-ui/core/MenuItem";
 import Badge from "@material-ui/core/Badge";
-import { Link } from "react-router-dom";
 import LocalGroceryStoreIcon from "@material-ui/icons/LocalGroceryStore";
 import SubStore from "../subStore/subStore";
 import {  useSelector } from "react-redux"
@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
   mr_2: {
     marginRight: theme.spacing(3),
     border:"1px solid white",
-    color: "white"
+    color: "white",
   },
   storeIcon: {
     cursor: "pointer",
@@ -71,7 +71,7 @@ export default function Header() {
       <AppBar className={classes.color} position="static">
         <Toolbar>
             <div className="iconHeder">
-              <img className="iconHederImg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Icon_Essen.svg/1200px-Icon_Essen.svg.png" />
+              <img className="iconHederImg" src="https://schastlivaya7ya.ru/wp-content/uploads/2017/03/picca-1.png" />
             </div>
           <Typography variant="h6" className={classes.title}>
             <Link to="/" style={{ color: "white", padding:"10px" }}>
@@ -79,7 +79,7 @@ export default function Header() {
               </Link>
           </Typography>
             
-            <Link to="/food">
+            {/* <Link to="/food">
               <Button className={classes.mr_2} color="primary" variant="outlined"   >
                 Food
               </Button>
@@ -93,7 +93,7 @@ export default function Header() {
               <Button className={classes.mr_2} color="primary" variant="outlined"   >
                 Drink
               </Button>
-            </Link>
+            </Link> */}
             <Link to="/" >
               <Button className={classes.mr_2} color="inherit" variant="outlined"  >
                 Pizza
@@ -106,9 +106,9 @@ export default function Header() {
               </Button>
             </Link>  
             </Link>  
-            <MenuItem>
+            {/* <MenuItem> */}
               <IconButton
-                onClick={handleShowSubStore}
+                onMouseOverCapture={handleShowSubStore}
                 aria-label="show 11 new notifications"
                 color="inherit"
                 >
@@ -116,7 +116,7 @@ export default function Header() {
                   <LocalGroceryStoreIcon className={classes.storeIcon} />
                 </Badge>
               </IconButton>
-            </MenuItem>
+            {/* </MenuItem> */}
         </Toolbar>
       </AppBar>
       <div className="SubStore">

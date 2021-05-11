@@ -8,12 +8,12 @@ const Main = ({ pizza }) => {
 
   return (
     <div className="mainPage">
-      <div className="carusel">
-        <CarouselEffect/>
-      </div>
-      <div className="filter">
+      {/* <div className="filter">
         <Filter />
       </div>
+      <div className="carusel">
+        <CarouselEffect/>
+      </div> */}
       <div className="cards">
         {pizza && pizza.map((c, i) => {
           return <CardItem key={i} {...c} />;

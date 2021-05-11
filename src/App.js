@@ -25,10 +25,11 @@ import Memo from "./components/hook/memo";
 import ChildComponent from "./components/context/ChildComponent"
 import ParentComponent from "./components/context/ParentComponent"
 import ThemeProvider from "./components/context/ThemeProvider"
-import ToggleBtn from "./components/context/ToggleBtn"
-import CallBack from "./components/hook/callBack"
-import ThemeComponenet from "./components/mobx and context exchange/ThemeComponenet"
-
+import ToggleBtn from "./components/context/ToggleBtn";
+import CallBack from "./components/hook/callBack";
+import ThemeComponenet from "./components/mobx and context exchange/ThemeComponenet";
+// import StateBtn from "./components/example/StateBtn"
+import NewHeader from "./components/newHeader/header";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -42,38 +43,26 @@ const useStyles = makeStyles((theme) => ({
 
 function App() {
   
-  // const {foods} = useSelector((state) => state.cardData);
+  const {foods} = useSelector((state) => state.cardData);
 
   
-  // console.log("stordan App ga kegan foods",foods)
+  console.log("stordan App ga kegan foods",foods)
   
-  // const classes = useStyles();
+  const classes = useStyles();
 
 
 
 
   return (
     <div className="App">
-      {/* <CallBack /> */}
-      <ThemeComponenet />
-      {/* <ThemeProvider>
-        <ChildComponent />
-        <ParentComponent />
-        <ToggleBtn />
-      </ThemeProvider> */}
-      {/* <Memo /> */}
-      {/* <Suspense fallback={<h1>loading...</h1>} >
-        <Card />
-        <List />
-      </Suspense> */}
-{/* 
-      <Header />
+      <NewHeader />
       <Switch>
 
         <Route 
           path="/" 
           exact 
-          render={(props) => <Pizza props={props} />} />
+          render={(props) => <Pizza props={props} />} 
+          />
 
         <Route 
           path="/drink" 
@@ -102,20 +91,20 @@ function App() {
           render={(props) => {
             return <Login props={props}  />;
           }}
-        />  
+          />  
 
         <Route
           path="/product/:id"
           render={(props) => {
             return <Product props={props} data={foods} />;
           }}
-        />
+          />
           <Route
             path="/filteredByLabel/:id"
             render={(props) => {
               return <FilteredByLabel props={props} data={foods}  />;
             }}
-          />
+            />
 
         <Route
         path="/filteredByCost/:id"
@@ -129,10 +118,25 @@ function App() {
           render={(props) => {
             return <FilteredByDate props={props} data={foods} />;
           }}
-        />
+          />
 
-      </Switch> */}
+      </Switch>
+      {/* <ThemeComponenet /> */}
+      {/* <CallBack /> */}
+      {/* <ThemeProvider>
+        <ChildComponent />
+        <ParentComponent />
+        <ToggleBtn />
+      </ThemeProvider> */}
+      {/* <Memo /> */}
+      {/* <Suspense fallback={<h1>loading...</h1>} >
+        <Card />
+        <List />
+      </Suspense> */}
+    
+      {/* <Header /> */}
       {/* <Footer/> */}
+      {/* <StateBtn /> */}
       {/* <Example/> */}
     </div>
   );

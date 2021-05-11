@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 
 // USEREF HOOKI ORQALI FORUM BILAN ISHLASH
 // import { useRef, useState } from "react"
@@ -163,3 +163,25 @@ import React from "react";
 // export default Example;
 
 
+// import React,{ useState } from "react";
+
+
+// const StateBtn = () => {
+//   const [states,setStates]= useState(1);
+
+//   const handleColor = (e)=> {
+//     e.preventDefault();
+//     setStates(e.target.name)
+//   }
+
+//   return (
+//     <div style={{display:"flex",}}>
+//       <button style={{backgroundColor: states == 1 ? "black" : "white"}} name="1" onClick={(e)=> handleColor(e)}>home 1</button>
+//       <button style={{backgroundColor: states == 2 ? "black" : "white"}} name="2" onClick={(e)=> handleColor(e)}>abute 2</button>
+//       <button style={{backgroundColor: states == 3 ? "black" : "white"}} name="3" onClick={(e)=> handleColor(e)}>contact 3</button>
+//       <button style={{backgroundColor: states == 4 ? "black" : "white"}} name="4" onClick={(e)=> handleColor(e)}>footer 4</button>
+//     </div>
+//   )
+// }
+
+// export default StateBtn;

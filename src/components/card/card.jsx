@@ -14,15 +14,16 @@ import { useDispatch } from "react-redux"
 
 const useStyles = makeStyles({
   root: {
-    maxWidth: 345,
+    maxWidth: 300,
+    minWidth:240,
     display:"flex",
     flexDirection:"column",
     justifyContent:"space-between",
-    boxShadow:"0px 0px 3px black"
+    boxShadow:"0px 0px 3px black",
   },
   
   Moreinfo:{
-    width:"50%"
+    width:"50%",
   },
   storeIcon:{
     width:"50%"
@@ -65,7 +66,8 @@ export default function CardItem({ label, image, totalWeight,totalTime }) {
       <CardActions className="flex-between">
         <Link to={`/product/${label}`}>
           <button className="andAndMoreInfo" size="small"  variant="outlined" color="primary">
-            𝐌𝐨𝐫𝐞 𝐢𝐧𝐟𝐨
+            {/* 𝐌𝐨𝐫𝐞 𝐢𝐧𝐟𝐨 */}
+            <img className="card-storeIcon" src="http://cdn.onlinewebfonts.com/svg/download_227886.png" />
           </button >
         </Link>
         <button className="andAndMoreInfo" 
@@ -73,7 +75,8 @@ export default function CardItem({ label, image, totalWeight,totalTime }) {
         color="primary" 
         variant="outlined"
         onClick={() => dispatch(addFood(item))}>
-          𝐀𝐝𝐝 𝐭𝐨 𝐜𝐚𝐫𝐝
+          {/* 𝐀𝐝𝐝 𝐭𝐨 𝐜𝐚𝐫𝐝 */}
+          <img className="card-storeIcon" src="http://cdn.onlinewebfonts.com/svg/download_129213.png" />
         </button>
 
       </CardActions>

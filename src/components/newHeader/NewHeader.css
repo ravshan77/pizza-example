@@ -1,0 +1,121 @@
+.store {
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  z-index: 100;
+}
+
+.activeClass {
+  text-decoration: overline;
+  color: orange;
+}
+
+.Pizza-title {
+  padding: 0;
+  margin: 0;
+  font-weight: bold;
+  color: black;
+  font-family: cursive;
+  font-size: 150%;
+}
+
+.Pizza-info {
+  padding: 0;
+  margin: 0;
+  color: black;
+  /* font-weight: 1000; */
+  font-family: cursive;
+}
+
+.dostafki-text {
+  padding: 0;
+  margin: 0;
+  color: black;
+  font-weight: 1000;
+  font-family: cursive;
+}
+
+.red-text {
+  color: red;
+}
+
+.opacity {
+  color: rgb(105, 109, 116);
+}
+
+.empty-img {
+  width: 100%;
+  height: 100%;
+  margin-top: 15%;
+}
+
+.empt-imges {
+  width: 80%;
+  height: 70%;
+  margin: 0 auto;
+}
+
+.empty-store {
+  width: 100%;
+  height: 100%;
+}
+
+.subStores {
+  /* margin-top: 100px; */
+  height: 50px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  z-index: 100000;
+}
+
+.store-blok {
+  width: 90%;
+  margin: 0 auto;
+  height: 0;
+  display: flex;
+  justify-content: flex-end;
+  z-index: 100000;
+}
+
+.subStoreCard-on {
+  transition: all 0.3s;
+  width: 390px;
+  height: 400px;
+  margin-top: 5px;
+  box-shadow: 0 0 4px black;
+  position: relative;
+  z-index: 1000000;
+}
+
+.subStoreCard-off {
+  transition: all 0.3s;
+  width: 390px;
+  height: 100%;
+  box-shadow: 0 0 8px black;
+  position: relative;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.order-text {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  box-shadow: 0 6px 9px -10px black;
+  position: absolute;
+  z-index: 10;
+}
+
+.price {
+  padding: 10px 0;
+  font-weight: bolder;
+  font-size: 110%;
+  margin-left: 7%;
+  margin-right: 5%;
+  font-family: cursive;
+}
